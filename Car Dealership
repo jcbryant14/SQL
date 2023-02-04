@@ -1,0 +1,19 @@
+CREATE TABLE cars (id TEXT, type TEXT, quantity INTEGER, color TEXT, price INTEGER, release_year INTEGER);
+
+INSERT INTO cars VALUES ("Chevy", "Truck", (2), "Red", (15000),  (2015));
+INSERT INTO cars VALUES ("Chevy", "Compact", (4), "Blue", (17500), (2017));
+INSERT INTO cars VALUES ("Chevy", "Sedan", (5), "Gray", (18000), (2019));
+INSERT INTO cars VALUES ("Chevy", "SUV", (8), "Red", (25000), (2016));
+INSERT INTO cars VALUES ("Chevy", "SUV", (2), "Blue", (25000), (2016));
+INSERT INTO cars VALUES ("Chevy", "Truck", (10), "Blue", (15500), (2015));
+INSERT INTO cars VALUES ("Chevy", "Sedan", (8), "Blue", (18000), (2018));
+INSERT INTO cars VALUES ("Ford", "Truck", (3), "Gray", (12000), (2012));
+INSERT INTO cars VALUES ("Ford", "Sedan", (1), "Black", (25000), (2021));
+INSERT INTO cars VALUES ("Ford", "SUV", (3), "White", (57000), (2023));
+INSERT INTO cars VALUES ("Ford", "Compact", (7), "Teal", (12000), (2014));
+INSERT INTO cars VALUES ("Ford", "Sedan", (12), "Silver", (14000), (2015));
+INSERT INTO cars VALUES ("Ford", "Truck", (23), "Black", (35000), (2022));
+INSERT INTO cars VALUES ("Ford", "Sedan", (5), "Green", (10000), (2014));
+INSERT INTO cars VALUES ("Ford", "Compact", (7), "Red", (8000), (2012));
+
+SELECT id, SUM(quantity) FROM cars GROUP BY release_year
