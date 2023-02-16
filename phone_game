@@ -1,0 +1,41 @@
+/* What does the app's SQL look like? */
+CREATE TABLE phone_game (id INTEGER PRIMARY KEY, name TEXT, score INTEGER, level INTEGER, date_started TEXT);
+
+INSERT INTO phone_game VALUES (1,'Jeremy Bryant', 134532, 32, '02/01/2023');
+INSERT INTO phone_game VALUES (2,'Zak Bartman', 654345, 54, '01/05/2023');
+INSERT INTO phone_game VALUES (3,'Est Jet', 251541, 46, '04/03/2021');
+INSERT INTO phone_game VALUES (4,'Lincoln Beard', 465324, 35, '03/02/2022');
+INSERT INTO phone_game VALUES (5,'baby 1', 613554, 44, '01/10/2023');
+INSERT INTO phone_game VALUES (6,'Owen Wills', 15493, 2, '02/14/2023');
+INSERT INTO phone_game VALUES (7,'Harley Tree', 45258, 15, '03/15/2022');
+INSERT INTO phone_game VALUES (8,'Jack Sniper', 651321544, 142, '01/01/2020');
+INSERT INTO phone_game VALUES (9,'John Doe', 65254, 19, '02/02/2023');
+INSERT INTO phone_game VALUES (10,'Jessica Doe', 231354, 25, '01/01/2023');
+
+SELECT * FROM phone_game GROUP BY score;
+
+ALTER TABLE phone_game ADD gamer_id TEXT default 'unknown';
+
+SELECT * FROM phone_game;
+
+UPDATE phone_game SET gamer_id = 'owdawg' WHERE id = 6;
+UPDATE phone_game SET gamer_id = 'bigtimegamer' WHERE id = 8;
+UPDATE phone_game SET gamer_id = 'buzzlightyear' WHERE id = 1;
+UPDATE phone_game SET gamer_id = 'notwoody' WHERE id = 2;
+UPDATE phone_game SET gamer_id = 'gamingprincess' WHERE id = 3;
+UPDATE phone_game SET gamer_id = 'monstertruckdestruction' WHERE id = 4;
+
+SELECT * FROM phone_game;
+
+DELETE FROM phone_game WHERE id = 10;
+
+SELECT * FROM phone_game;
+
+DELETE FROM phone_game WHERE id = 9;
+
+SELECT * FROM phone_game;
+
+UPDATE phone_game SET gamer_id = 'bubbaschuggas' WHERE id = 5;
+UPDATE phone_game SET gamer_id = 'mamadrama' WHERE id = 7;
+
+SELECT * FROM phone_game;
