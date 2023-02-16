@@ -50,3 +50,5 @@ SELECT famous_athletes.id, famous_athletes.fullname, famous_athletes.age, buddy.
 FROM famous_athletes 
 JOIN famous_athletes buddy 
 ON buddy.teammate_id = famous_athletes.teammate_id;
+
+
