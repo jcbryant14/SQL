@@ -42,4 +42,15 @@ FROM BIT_DB.spotifydata
 ORDER BY popularity desc
 LIMIT 15
 
-#
+#Top_5 artists by tempo
+SELECT artist_name as artist, popularity, tempo 
+FROM BIT_DB.Spotifydata 
+WHERE tempo > 115 AND popularity > 85
+GROUP BY tempo LIMIT 5;
+
+#Amount of Minutes it would take to listen to all 50 songs
+SELECT SUM(duration_ms/1000)/60 as Minutes FROM BIT_DB.Spotifydata;
+
+#Average length of song
+SELECT avg(duration_ms/1000) AS Seconds FROM BIT_DB.Spotifydata:
+
